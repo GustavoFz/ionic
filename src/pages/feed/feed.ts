@@ -39,7 +39,7 @@ export class FeedPage {
   ionViewDidLoad() {
     this.movieProvider.getLatersMovies().subscribe(
       data => {
-        const response = data;
+        const response = (data as any);
         this.lista_filmes = response.results;
 
         console.log(response);
